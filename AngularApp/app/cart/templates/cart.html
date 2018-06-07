@@ -1,0 +1,22 @@
+<div class="main">
+    <div class="cart-box" ng-click="orderBooks();"><i class="fa fa-credit-card"></i></div>
+    <div class="search-box">
+        <div class="title">
+            <h4>Cart</h4>
+        </div>
+    </div>
+    <hr>
+    <div class="search-results">
+        <div ng-repeat="book in orderedBookList track by $index" ng-if="orderedBookList.length > 0 && !orderPlaced" ng-click="navigateTo(book.id)">
+            <book-card book-data="book.volumeInfo" remove-enabled="true" remove-book="removeBook(book.id)"></book-card>
+        </div>
+        <div ng-if="orderedBookList.length === 0 && !orderPlaced" class="order">
+            <span>No items in the cart</span>
+        </div>
+        <div ng-if="orderPlaced" class="order">
+            <span>
+                Successfull order
+            </span>
+        </div>
+    </div>
+</div>

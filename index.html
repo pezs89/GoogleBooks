@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<title>Teszt</title>
+		<base href="/" />
+		<link href="/Content/app.css" rel="stylesheet" />
+	</head>
+
+	<body data-ng-app="app" data-ng-strict-di>
+		<div data-ng-view></div>
+
+		<script src="/Scripts/angular.js"></script>
+		<script src="/Scripts/angular-route.js"></script>
+		<script src="/Scripts/angular-storage.js"></script>
+
+		<script src="/AngularApp/app.js"></script>
+		<script src="/AngularApp/routes.js"></script>
+		
+		<script src="/AngularApp/app/index/controllers/homeCtrl.js"></script>
+		<script src="/AngularApp/app/index/services/homeService.js"></script>
+
+		<script src="/AngularApp/app/bookDetail/controllers/bookDetailCtrl.js"></script>
+		<script src="/AngularApp/app/bookDetail/services/bookDetailService.js"></script>
+
+		<script src="/AngularApp/app/cart/controllers/cartCtrl.js"></script>
+
+		<script src="/AngularApp/shared/helper.js"></script>
+
+		<script src="/AngularApp/shared/components/card/bookCard.js"></script>
+	</body>
+</html>

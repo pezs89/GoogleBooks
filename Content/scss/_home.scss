@@ -1,0 +1,170 @@
+.main {
+    width: 100%;
+    height: 100%;
+
+    .cart-box {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width:40px;
+
+        i {
+            color: blue;
+        }
+    }
+    hr {
+        margin: 25px 15% 0 15%;
+        width: 70%;
+    }
+    .book {
+        border: 1px solid black;
+        width: 80%;
+        margin: 5% 10% 0 10%;
+        .header {
+            width: calc(100% - 10px);
+            margin: 5px;
+
+            h3 {
+                margin: 5px;
+                width: 75%;
+                display: inline-block;
+            }
+
+            button {
+                float: right;
+            }
+
+            i {
+                width: 25%;
+                float: right;
+                display: inline-block;
+            }
+        }
+
+        .details {
+            min-height: 300px;
+            padding: 5px;
+            .book-cover {
+                display: inline-block;
+                position: relative;
+                width: 25%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .book-details {
+                display: inline-block;
+                height: 100%;
+                padding: 5px;
+                width: calc(75% - 15px);
+                .authors {
+                    height: 25%;
+                }
+
+                .desc {
+                    height: 75%;
+                }
+            }
+        }
+    }
+
+    .search-box {
+        margin: 0 15% 0 15%;
+        width: 70%;
+        .title {
+            h4 {
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+
+        .search-inputs {
+            width: 50%;
+            margin: 0 25% 0 25%;
+            .search-input{
+                display: inline-block;
+                width: 75%;
+                margin: 0;
+                padding: 2px;
+                height: calc(30px - 6px);
+            }
+
+            button {
+                display: inline-block;
+                width: calc(25% - 6px);
+                height: 30px;
+                margin: 0;
+            }
+
+        }
+    }
+
+    .search-results {
+        margin: 25px 12.5% 0 12.5%;
+        .order {
+            margin: 0 25% 0 25%;
+            text-align: center;
+        }
+    }
+}
+
+.card-body {
+    width: 75%;
+    height: 150px;
+    margin-left: 12.5%;
+    margin-bottom: 5px;
+    border: 1px solid black;
+
+    .card-picture {
+        position: relative;
+        height: 100%;
+        width: 25%;
+        display: inline-block;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .card-detail {
+        display: inline-block;
+        height: 100%;
+        width: 70%;
+        &.small-width {
+            width: 60%;
+        } 
+
+        .book-title {
+            height: 25%;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .book-desc {
+            height:75%;
+            text-overflow: ellipsis;
+            width: 100%;
+            overflow: hidden;
+            
+        }
+    }
+    .remove-button {
+        float: right;
+        width: calc(15% - 5px);
+        display: inline-block;
+        height: 150px;
+        
+        i {
+            margin: 50% 0 0 50%;
+            color: darkred;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,48 @@
+$size-button: 30px;
+$cubic: cubic-bezier(0.26, 1.8, 0.17, 0.96);
+$size-text-button: 12px;
+$color-primary: #155D6D;
+$color-light: #fff;
+
+%btn {
+    padding: 0 1rem;
+    height: $size-button;
+    line-height: $size-button;
+    transition: all 0.2s ease-in-out, transform 0.6s $cubic;
+    transform-origin: center center;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: $size-text-button;
+    appearance: none;
+    cursor: pointer;
+    &:hover, &:focus {
+        cursor: pointer;
+    }
+    i {
+        margin: 0 5px;
+    }
+    &:focus {
+        outline: none;
+    }
+    
+}
+
+.btn,
+button {
+    @extend %btn;
+    &.primary {
+        color: $color-light;
+        background: rgba($color-primary, 0.7);
+        border: none;
+    }
+    &.default {
+        background-color: #666;
+        border: none;
+        opacity: 0.8;        
+        &:hover {
+            background-color: #666;
+        }
+    }
+}

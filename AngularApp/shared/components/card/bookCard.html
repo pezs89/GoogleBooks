@@ -1,0 +1,10 @@
+<div class="card-body">
+    <div class="card-picture">
+        <img ng-src="{{bookData.imageLinks.smallThumbnail}}"></img>
+    </div>
+    <div class="card-detail" ng-class="{'small-width': removeEnabled}">
+        <div class="book-title">{{bookData.title}} ({{bookData.count}} item)</div>
+        <div class="book-desc">{{bookData.description}}</div>
+    </div>
+    <div class="remove-button" ng-if="removeEnabled" ng-click="removeBook(book.id);"><i class="fa fa-trash"></i></div>
+</div>

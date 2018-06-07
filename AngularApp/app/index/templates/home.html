@@ -1,0 +1,18 @@
+<div class="main">
+    <div class="cart-box" ng-click="goToCart();"><i class="fa fa-shopping-cart"></i></div>
+    <div class="search-box">
+        <div class="title">
+            <h4>Book search</h4>
+        </div>
+        <div class="search-inputs">
+            <input class="search-input" type="text" ng-model="searchTerm" />
+            <button class="btn default" ng-click="searchItem(searchTerm)">Search</button>
+        </div>
+    </div>
+    <hr>
+    <div class="search-results">
+        <div ng-repeat="book in bookList" ng-if="bookList.length > 0" ng-click="navigateTo(book.id)">
+            <book-card book-data="book.volumeInfo"></book-card>
+        </div>
+    </div>
+</div>

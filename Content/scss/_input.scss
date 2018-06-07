@@ -1,0 +1,70 @@
+$size-input: 30px;
+$color-primary: #155D6D;
+$color-border-light: darken(#fff, 10%);
+$size-gutter: 15px;
+
+%input {
+    float: left;
+    width: 100%;
+    padding: 0 10px;
+    height: $size-input;
+    line-height: $size-input;
+    display: block;
+    border: 1px solid $color-border-light;
+    transition: all 0.2s ease-in-out;
+    &:focus {
+        outline: none;
+        border-color: $color-primary;
+        
+    }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"], 
+input[type="tel"], 
+input[type="search"] {
+    @extend %input;
+}
+// input[type="tel"] {
+//     @extend %input;
+//     max-width: 300px;
+// }
+textarea {
+    @extend %input;
+    padding: 10px;
+    line-height: 1.2em;
+    height: auto;
+
+}
+
+.form-container {
+    float: left;
+    width: 100%;
+    margin: 0 0 $size-gutter 0;
+}
+
+.input-group {
+    float: left;
+    width: 100%;
+    margin: 0 0 $size-gutter / 2 0;
+    label {
+        font-size: 0.8rem;
+        font-weight: bold;
+        float: left;
+        width: 100%;
+        margin: 0 0 $size-gutter / 3 0;
+        .hint {
+            float: right;
+            font-weight: normal;
+            font-style: italic;
+            color: #666;
+
+        }
+    }
+    .hint-inline {
+        float: left;
+        width: 100%;
+        line-height: $size-input;
+    }
+}
